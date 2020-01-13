@@ -2,7 +2,7 @@ import React from "react";
 import "./style/Badge.css";
 import LogoPlaztiConf from "../images/badge-header.svg";
 
-class Badges extends React.Component {
+class Badge extends React.Component {
   render() {
     return (
       <div className="Badge">
@@ -12,20 +12,20 @@ class Badges extends React.Component {
         <div className="Badge__section-name">
           <img
             className="Badge__avatar"
-            src="https://s.gravatar.com/avatar/5054521adc02159c30ab9bdb8e175366?s=80"
+            src={this.props.avatarUrl}
             alt="Avatar"
           ></img>
           <h1>
-            Jose <br></br> Alvarez
+            {this.props.firstName} <br></br> {this.props.LastName}
           </h1>
         </div>
         <div className="Badge__section-info">
-          <h3>Frontend Engineer</h3>
-          <div>@josealvarez</div>
+          <h3>{this.props.jobTitle}</h3>
+          <div>@{this.props.twittwe}</div>
         </div>
         <div className="Badge__footer">#PlatziConf</div>
       </div>
     );
   }
 }
-export default Badges;
+export default Badge;
