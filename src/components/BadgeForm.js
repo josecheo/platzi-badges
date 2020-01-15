@@ -28,7 +28,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="firstName"
-              value={this.state.firsName}
+              value={this.props.formValue.firstName}
             />
           </div>
           <div className="form-group">
@@ -38,7 +38,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="lastName"
-              value={this.state.lastName}
+              value={this.props.formValue.lastName}
             />
           </div>
           <div className="form-group">
@@ -48,7 +48,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="Email"
-              value={this.state.Email}
+              value={this.props.formValue.Email}
             />
           </div>
           <div className="form-group">
@@ -58,7 +58,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="jobTittle"
-              value={this.state.jobTttle}
+              value={this.props.formValue.jobTittle}
             />
           </div>
           <div className="form-group">
@@ -68,7 +68,7 @@ class BadgeForm extends React.Component {
               className="form-control"
               type="text"
               name="twitter"
-              value={this.state.twitter}
+              value={this.props.formValue.twitter}
             />
           </div>
 
