@@ -1,6 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Logo from "../images/badge-header.svg";
+import Logo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import "../pages/style/BadgeNew.css";
 import BadgeForm from "../components/BadgeForm";
@@ -27,19 +26,18 @@ class BadgeNew extends React.Component {
   render() {
     return (
       <div>
-        <Navbar />
         <div className="BadgeNew__hero">
-          <img className="img-fluid" src={Logo}></img>
+          <img className="img-fluid BadgeNew__hero__image" src={Logo}></img>
         </div>
         <div className="container">
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstName}
-                LastName={this.state.form.lastName}
+                firstName={this.state.form.firstName || "FIRST_NAME"}
+                LastName={this.state.form.lastName || "LAST_NAME"}
                 avatarUrl="https://s.gravatar.com/avatar/5054521adc02159c30ab9bdb8e175366?s=80"
-                jobTitle={this.state.form.jobTittle}
-                twittwe={this.state.form.twitter}
+                jobTitle={this.state.form.jobTittle || "Job_Tittle"}
+                twittwe={this.state.form.twitter || "Twitter"}
                 Email={this.state.form.Email}
               />
               ,

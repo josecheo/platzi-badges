@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 // import Badges from "./components/Badge";
 import "bootstrap/dist/css/bootstrap.css";
 import "./global.css";
-import Badges from "./pages/Badges";
+import App from "./components/App";
 
-const container = document.getElementById("app");
+const container = document.getElementById("root");
 
-ReactDOM.render(<Badges></Badges>, container);
+ReactDOM.render(<App></App>, container);

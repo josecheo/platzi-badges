@@ -1,0 +1,31 @@
+.notFound {
+  width: 100%;
+  min-height: calc(100vh - 60px);
+  background: url("../../images/stars.svg"), #1b1b25;
+  background-repeat: repeat;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+}
+
+.notFound__col {
+  display: flex;
+  align-items: center;
+  /* flex-direction: column;
+  justify-content: center;
+    */
+}
+
+/* @media screen and (min-width: 768px) {
+  .notFound__col {
+    align-items: flex-start;
+  }
+} */
+.notFoundImage {
+  width: 80%;
+}
+/* .notFoundBack {
+  text-decoration: none;
+  color: azure;
+  font-size: 35px;
+} */
