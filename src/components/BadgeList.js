@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/BadgeList.css";
+import Gravatar from "./Gravatar";
 
 class BadgeList extends React.Component {
   render() {
@@ -17,12 +18,15 @@ class BadgeList extends React.Component {
           {this.props.badges.map(badge => {
             return (
               <div key={badge.id} className="BadgesListItem">
-                <img
+                
+                <Gravatar
                   className="BadgesListItem__avatar"
-                  src={badge.avatarUrl}
+                  email={badge.email}
                   alt={`${badge.firstName} ${badge.lastName}`}
                 />
+                
                 <div>
+
                   <strong>
                     {badge.firstName} {badge.lastName}
                   </strong>

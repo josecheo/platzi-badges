@@ -5,8 +5,9 @@ class BadgeForm extends React.Component {
     firstName: "",
     lastName: "",
     Email: "",
-    jobTittle: "",
-    twitter: ""
+    jobTitle: "",
+    twitter: "",
+    avatarUrl: ""
   };
 
   //   handleChange = e => {
@@ -16,11 +17,12 @@ class BadgeForm extends React.Component {
   //   handleClick = e => {
   //     console.log(this.state);
   //   };
+
   render() {
     return (
       <div>
         <h1>New Attendant</h1>
-        <form>
+        <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
             <input
@@ -47,8 +49,8 @@ class BadgeForm extends React.Component {
               onChange={this.props.onChange}
               className="form-control"
               type="text"
-              name="Email"
-              value={this.props.formValue.Email}
+              name="email"
+              value={this.props.formValue.email}
             />
           </div>
           <div className="form-group">
@@ -57,8 +59,8 @@ class BadgeForm extends React.Component {
               onChange={this.props.onChange}
               className="form-control"
               type="text"
-              name="jobTittle"
-              value={this.props.formValue.jobTittle}
+              name="jobTitle"
+              value={this.props.formValue.jobTitle}
             />
           </div>
           <div className="form-group">
@@ -73,9 +75,10 @@ class BadgeForm extends React.Component {
           </div>
 
           <button
-            onClick={this.handleClick}
-            type="button"
+            // onClick={this.handleClick}
+            type="submit"
             className="btn btn-primary"
+            // onClick={this.props.onSubmit}
           >
             Save
           </button>

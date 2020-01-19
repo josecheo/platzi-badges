@@ -12,6 +12,8 @@ function Gravatar(props) {
       alt="Avatar"
     />
   );
+
+ 
 }
 
 export default Gravatar;

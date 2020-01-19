@@ -3,14 +3,16 @@ import Logo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
 import "../pages/style/BadgeNew.css";
 import BadgeForm from "../components/BadgeForm";
+import api from "../api";
+// import md5 from "md5";
 
 class BadgeNew extends React.Component {
   state = {
     form: {
       firstName: "",
       lastName: "",
-      Email: "",
-      jobTittle: "",
+      email: "",
+      jobTitle: "",
       twitter: ""
     }
   };
@@ -23,6 +25,20 @@ class BadgeNew extends React.Component {
       }
     });
   };
+
+  handleSubmit = async e => {
+    e.preventDefault();
+    this.setState({ loading: true, error: null });
+
+    try {
+      await api.badges.create(this.state.form);
+      this.setState({ loading: false });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
+      console.log(error);
+    }
+  };
+
   render() {
     return (
       <div>
@@ -35,16 +51,16 @@ class BadgeNew extends React.Component {
               <Badge
                 firstName={this.state.form.firstName || "FIRST_NAME"}
                 LastName={this.state.form.lastName || "LAST_NAME"}
-                avatarUrl="https://s.gravatar.com/avatar/5054521adc02159c30ab9bdb8e175366?s=80"
-                jobTitle={this.state.form.jobTittle || "Job_Tittle"}
+                jobTitle={this.state.form.jobTitle || "Job_Title"}
                 twittwe={this.state.form.twitter || "Twitter"}
-                Email={this.state.form.Email}
+                email={this.state.form.email}
               />
               ,
             </div>
-            <div className="col-6">
+            <div className=" col-6 Badge__form">
               <BadgeForm
                 onChange={this.handleChange}
+                onSubmit={this.handleSubmit}
                 formValue={this.state.form}
               />
             </div>
