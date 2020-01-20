@@ -1,19 +1,16 @@
 import React from "react";
-import md5 from "md5";
 
 function Gravatar(props) {
-  const email = props.email;
-  const hash = md5(email);
+  const firstName = props.firstName;
+  const lastName = props.lastName;
 
   return (
     <img
       className={props.className}
-      src={`https://www.gravatar.com/avatar/${hash}?d=identicon`}
+      src={`https://ui-avatars.com/api/?name=${firstName}+${lastName}&background=7dcd40&color=fff`}
       alt="Avatar"
     />
   );
-
- 
 }
 
 export default Gravatar;

@@ -18,15 +18,14 @@ class BadgeList extends React.Component {
           {this.props.badges.map(badge => {
             return (
               <div key={badge.id} className="BadgesListItem">
-                
                 <Gravatar
                   className="BadgesListItem__avatar"
-                  email={badge.email}
+                  firstName={badge.firstName}
+                  lastName={badge.lastName}
                   alt={`${badge.firstName} ${badge.lastName}`}
                 />
-                
-                <div>
 
+                <div>
                   <strong>
                     {badge.firstName} {badge.lastName}
                   </strong>

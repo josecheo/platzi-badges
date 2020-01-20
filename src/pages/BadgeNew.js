@@ -4,6 +4,9 @@ import Badge from "../components/Badge";
 import "../pages/style/BadgeNew.css";
 import BadgeForm from "../components/BadgeForm";
 import api from "../api";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+
 // import md5 from "md5";
 
 class BadgeNew extends React.Component {
@@ -33,6 +36,8 @@ class BadgeNew extends React.Component {
     try {
       await api.badges.create(this.state.form);
       this.setState({ loading: false });
+      Swal.fire("Good job!", "El Registro es exitoso!", "success");
+      this.props.history.push("/badges");
     } catch (error) {
       this.setState({ loading: false, error: error });
       console.log(error);
@@ -62,6 +67,7 @@ class BadgeNew extends React.Component {
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}
                 formValue={this.state.form}
+                error={this.state.error}
               />
             </div>
           </div>
