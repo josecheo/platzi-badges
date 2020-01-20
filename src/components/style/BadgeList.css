@@ -9,6 +9,10 @@
   display: flex;
   padding: 1rem;
   margin-bottom: 1rem;
+  transition: margin-left 0.3s linear;
+}
+.BadgesListItem:hover {
+  margin-left: 1rem;
 }
 
 .BadgesListItem__avatar {
@@ -21,4 +25,3 @@
 .Badge__twitter {
   color: cornflowerblue;
 }
-
