@@ -58,7 +58,7 @@ class BadgeNew extends React.Component {
             <div className="col-6">
               <Badge
                 firstName={this.state.form.firstName || "FIRST_NAME"}
-                LastName={this.state.form.lastName || "LAST_NAME"}
+                lastName={this.state.form.lastName || "LAST_NAME"}
                 jobTitle={this.state.form.jobTitle || "Job_Title"}
                 twittwe={this.state.form.twitter || "Twitter"}
                 email={this.state.form.email}
