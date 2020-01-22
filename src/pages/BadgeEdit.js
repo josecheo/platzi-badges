@@ -30,10 +30,9 @@ class BadgeEdit extends React.Component {
 
     try {
       const data = await api.badges.read(this.props.match.params.badgeId);
-      this.setState({ loading: false, form: data })
-      
-    } catch (error) {this.setState({loading:false , error:error})
-
+      this.setState({ loading: false, form: data });
+    } catch (error) {
+      this.setState({ loading: false, error: error });
     }
   };
 
@@ -50,7 +49,6 @@ class BadgeEdit extends React.Component {
     e.preventDefault();
     this.setState({ loading: true, error: null });
 
-    
     try {
       await api.badges.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
@@ -66,7 +64,11 @@ class BadgeEdit extends React.Component {
     return (
       <div>
         <div className="BadgeEdit__hero">
-          <img className="img-fluid BadgeEdit__hero__image" src={Logo}></img>
+          <img
+            className="img-fluid BadgeEdit__hero__image"
+            src={Logo}
+            alt="Logo"
+          ></img>
         </div>
         <div className="container">
           <div className="row">
@@ -81,7 +83,7 @@ class BadgeEdit extends React.Component {
               ,
             </div>
             <div className=" col-6 Badge__form">
-            <h1>Edit Attendant</h1>
+              <h1>Edit Attendant</h1>
               <BadgeForm
                 onChange={this.handleChange}
                 onSubmit={this.handleSubmit}

@@ -5,7 +5,7 @@
       "lastName": "Sanoja",
       "email": "joseche0.ja@gmail.com",
       "jobTitle": "Senior Frontend Developer",
-      "twitter": "joseche0",
+      "twitter": "joseche",
       "id": 1
     },
     {
@@ -23,6 +23,22 @@
       "jobTitle": "Diseñadora Web",
       "twitter": "rubyalvz",
       "id": 3
+    },
+    {
+      "firstName": "Miguel",
+      "lastName": "alvarez",
+      "email": "joseche0.dota2@gmail.com",
+      "jobTitle": "tretrebt34",
+      "twitter": "armandopiner",
+      "id": 4
+    },
+    {
+      "firstName": "Jose",
+      "lastName": "Gabriel",
+      "email": "alvarez@jose.es",
+      "jobTitle": "Bebe de papa",
+      "twitter": "michipurri",
+      "id": 5
     }
   ]
 }

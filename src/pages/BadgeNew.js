@@ -47,7 +47,11 @@ class BadgeNew extends React.Component {
     return (
       <div>
         <div className="BadgeNew__hero">
-          <img className="img-fluid BadgeNew__hero__image" src={Logo}></img>
+          <img
+            className="img-fluid BadgeNew__hero__image"
+            src={Logo}
+            alt="Logo"
+          ></img>
         </div>
         <div className="container">
           <div className="row">
