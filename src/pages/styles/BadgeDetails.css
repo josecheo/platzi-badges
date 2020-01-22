@@ -12,13 +12,9 @@
   flex-direction: column;
   justify-content: center;
 }
-.Container__actions {
+
+.BadgeDetails__buttons {
   display: flex;
-  justify-content: center;
-}
-.button__edit {
-  width: 100%;
-}
-.button__delete {
-  width: 100%;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
 }
