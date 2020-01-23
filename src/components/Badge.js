@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/Badge.css";
+import "./styles/Badge.css";
 import LogoPlaztiConf from "../images/badge-header.svg";
 import Gravatar from "../components/Gravatar";
 

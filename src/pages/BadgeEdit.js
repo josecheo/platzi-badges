@@ -1,7 +1,7 @@
 import React from "react";
 import Logo from "../images/platziconf-logo.svg";
 import Badge from "../components/Badge";
-import "../pages/style/BadgeEdit.css";
+import "../pages/styles/BadgeEdit.css";
 import BadgeForm from "../components/BadgeForm";
 import api from "../api";
 import Swal from "sweetalert2";

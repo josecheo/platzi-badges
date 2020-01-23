@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../pages/style/Badges.css";
+import "../pages/styles/Badges.css";
 import BadgeList from "../components/BadgeList";
 import Logo from "../images/badge-header.svg";
 import api from "../api";

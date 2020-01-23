@@ -1,10 +1,18 @@
 {
   "badges": [
     {
+      "firstName": "Jose",
+      "lastName": "Alvarez",
+      "email": "joseche0.ja@gmail.com",
+      "jobTitle": "Senior Frontend Developer",
+      "twitter": "joseche0",
+      "id": 1
+    },
+    {
       "firstName": "Miguel",
       "lastName": "Piñero",
       "email": "armandopiner@gmail.com",
-      "jobTitle": "Senior Frontend Developer",
+      "jobTitle": "Diseñadora Web",
       "twitter": "armandopiner",
       "id": 2
     }

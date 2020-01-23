@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./style/Home.css";
+import "./styles/Home.css";
 import platziconfLogoImage from "../images/platziconf-logo.svg";
 import astronautsImage from "../images/astronauts.svg";
 

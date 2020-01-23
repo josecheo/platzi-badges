@@ -1,5 +1,5 @@
 import React from "react";
-import "./style/notFound.css";
+import "./styles/notFound.css";
 import imgNotfound from "../images/Recurso.png";
 import { Link } from "react-router-dom";
 
