@@ -18,7 +18,7 @@ function BadgeDetails(props) {
             </div>
             <div className="col-6 BadgeDetails__hero-attendant-name">
               <h1>
-                {badge.firstName} {badge.lastName}
+                {badge.first_name} {badge.last_name}
               </h1>
             </div>
           </div>
@@ -29,11 +29,11 @@ function BadgeDetails(props) {
         <div className="row">
           <div className="col">
             <Badge
-              firstName={badge.firstName}
-              lastName={badge.lastName}
+              first_name={badge.first_name}
+              last_name={badge.last_name}
               email={badge.email}
               twitter={badge.twitter}
-              jobTitle={badge.jobTitle}
+              job_title={badge.job_title}
             />
           </div>
           <div className="col">

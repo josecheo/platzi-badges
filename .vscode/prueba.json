@@ -38,5 +38,15 @@
     "twitter": "@miguelarmanp",
     "created_at": "2020-01-30T03:40:21.828Z",
     "updated_at": "2020-01-30T03:40:21.828Z"
+  },
+  {
+    "id": 5,
+    "first_name": "jose",
+    "last_name": "alvarez",
+    "email": "joseche0.ja@gmail.com",
+    "job_title": "Froned",
+    "twitter": "rubyalvz",
+    "created_at": "2020-02-01T03:57:13.072Z",
+    "updated_at": "2020-02-01T03:57:13.072Z"
   }
 ]

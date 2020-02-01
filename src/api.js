@@ -10,10 +10,10 @@ const BASE_URL = "http://polar-inlet-87028.herokuapp.com";
 async function callApi(endpoint, options = {}) {
   // await simulateNetworkLatency();
 
-  // options.headers = {
-  //   "Content-Type": "application/json",
-  //   Accept: "application/json"
-  // };
+  options.headers = {
+     "Content-Type": "application/json",
+     Accept: "application/json"
+   };
 
   const url = BASE_URL + endpoint;
   const response = await fetch(url, options);
@@ -27,7 +27,7 @@ const api = {
     return callApi("/badges");
   },
   create(badge) {
-    return callApi(`/badges`, {
+    return callApi("/badges", {
       method: "POST",
       body: JSON.stringify(badge)
     });

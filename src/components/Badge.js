@@ -13,16 +13,16 @@ class Badge extends React.Component {
         <div className="Badge__section-name">
           <Gravatar
             className="Badge__avatar"
-            firstName={this.props.firstName}
-            lastName={this.props.lastName}
+            first_name={this.props.first_name}
+            last_name={this.props.last_name}
             email={this.props.email}
           />
           <h1>
-            {this.props.firstName} <br></br> {this.props.lastName}
+            {this.props.first_name} <br></br> {this.props.last_name}
           </h1>
         </div>
         <div className="Badge__section-info">
-          <h3>{this.props.jobTitle}</h3>
+          <h3>{this.props.job_title}</h3>
           <div>@{this.props.twitter}</div>
         </div>
         <div className="Badge__footer">#PlatziConf</div>

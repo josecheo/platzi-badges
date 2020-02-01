@@ -1,18 +1,18 @@
 {
   "badges": [
     {
-      "firstName": "Miguel",
-      "lastName": "Alvarez",
+      "first_name": "Miguel",
+      "last_name": "Alvarez",
       "email": "joseche0.ja@gmail.com",
-      "jobTitle": "Bebe de papa",
+      "job_title": "Bebe de papa",
       "twitter": "wet",
       "id": 1
     },
     {
-      "firstName": "Ruby",
-      "lastName": "Alvarez",
+      "first_name": "Ruby",
+      "last_name": "Alvarez",
       "email": "joseche0.ja@gmail.com",
-      "jobTitle": "tretrebt34",
+      "job_title": "tretrebt34",
       "twitter": "wet",
       "id": 2
     }

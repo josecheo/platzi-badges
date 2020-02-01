@@ -13,10 +13,10 @@ class BadgeEdit extends React.Component {
     loading: true,
     error: null,
     form: {
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       email: "",
-      jobTitle: "",
+      job_title: "",
       twitter: ""
     }
   };
@@ -74,9 +74,9 @@ class BadgeEdit extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstName || "FIRST_NAME"}
-                lastName={this.state.form.lastName || "LAST_NAME"}
-                jobTitle={this.state.form.jobTitle || "Job_Title"}
+                first_name={this.state.form.first_name || "FIRST_NAME"}
+                last_name={this.state.form.last_name || "LAST_NAME"}
+                job_title={this.state.form.job_title || "Job_Title"}
                 twittwe={this.state.form.twitter || "Twitter"}
                 email={this.state.form.email}
               />

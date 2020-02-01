@@ -9,7 +9,7 @@ function useSearchBadges(badges) {
 
   React.useMemo(() => {
     const result = badges.filter(badge => {
-      return `${badge.firstName} ${badge.lastName}`
+      return `${badge.first_name} ${badge.last_name}`
         .toLowerCase()
         .includes(query.toLowerCase());
     });
@@ -60,21 +60,21 @@ function BadgeList(props) {
               <div className="BadgesListItem">
                 <Gravatar
                   className="BadgesListItem__avatar"
-                  firstName={badge.firstName}
-                  lastName={badge.lastName}
-                  alt={`${badge.firstName} ${badge.lastName}`}
+                  first_name={badge.first_name}
+                  last_name={badge.last_name}
+                  alt={`${badge.first_name} ${badge.last_name}`}
                 />
 
                 <div>
                   <strong>
-                    {badge.firstName} {badge.lastName}
+                    {badge.first_name} {badge.last_name}
                   </strong>
                   <strong className="Badge__twitter">
                     <br />@{badge.twitter}
                   </strong>
 
                   <br />
-                  {badge.jobTitle}
+                  {badge.job_title}
                 </div>
               </div>
             </Link>

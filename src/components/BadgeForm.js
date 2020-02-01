@@ -2,10 +2,10 @@ import React from "react";
 
 class BadgeForm extends React.Component {
   state = {
-    firstName: "",
-    lastName: "",
+    first_name: "",
+    last_name: "",
     Email: "",
-    jobTitle: "",
+    job_title: "",
     twitter: "",
     avatarUrl: ""
   };
@@ -21,7 +21,6 @@ class BadgeForm extends React.Component {
   render() {
     return (
       <div>
-        
         <form onSubmit={this.props.onSubmit}>
           <div className="form-group">
             <label>First Name</label>
@@ -29,8 +28,8 @@ class BadgeForm extends React.Component {
               onChange={this.props.onChange}
               className="form-control"
               type="text"
-              name="firstName"
-              value={this.props.formValue.firstName}
+              name="first_name"
+              value={this.props.formValue.first_name}
             />
           </div>
           <div className="form-group">
@@ -39,8 +38,8 @@ class BadgeForm extends React.Component {
               onChange={this.props.onChange}
               className="form-control"
               type="text"
-              name="lastName"
-              value={this.props.formValue.lastName}
+              name="last_name"
+              value={this.props.formValue.last_name}
             />
           </div>
           <div className="form-group">
@@ -59,8 +58,8 @@ class BadgeForm extends React.Component {
               onChange={this.props.onChange}
               className="form-control"
               type="text"
-              name="jobTitle"
-              value={this.props.formValue.jobTitle}
+              name="job_title"
+              value={this.props.formValue.job_title}
             />
           </div>
           <div className="form-group">

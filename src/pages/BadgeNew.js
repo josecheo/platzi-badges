@@ -11,10 +11,10 @@ import Swal from "sweetalert2";
 class BadgeNew extends React.Component {
   state = {
     form: {
-      firstName: "",
-      lastName: "",
+      first_name: "",
+      last_name: "",
       email: "",
-      jobTitle: "",
+      job_title: "",
       twitter: ""
     }
   };
@@ -33,7 +33,7 @@ class BadgeNew extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.create(this.state.form);
+      await api.create(this.state.form);
       this.setState({ loading: false });
       Swal.fire("Good job!", "Registration is successful", "success");
       this.props.history.push("/badges");
@@ -57,9 +57,9 @@ class BadgeNew extends React.Component {
           <div className="row">
             <div className="col-6">
               <Badge
-                firstName={this.state.form.firstName || "FIRST_NAME"}
-                lastName={this.state.form.lastName || "LAST_NAME"}
-                jobTitle={this.state.form.jobTitle || "Job_Title"}
+                first_name={this.state.form.first_name || "FIRST_NAME"}
+                last_name={this.state.form.last_name || "LAST_NAME"}
+                job_title={this.state.form.job_title || "Job_Title"}
                 twittwe={this.state.form.twitter || "Twitter"}
                 email={this.state.form.email}
               />
