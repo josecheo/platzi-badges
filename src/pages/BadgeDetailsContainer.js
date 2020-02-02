@@ -45,6 +45,7 @@ class BadgeDetailsContainer extends React.Component {
       this.props.history.push("/badges");
     } catch (error) {
         this.setState({ loading: false, error: null });
+      Swal.fire("Good job!", "Delete is successful", "success");
       this.props.history.push("/badges");
     }
   };
