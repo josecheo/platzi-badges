@@ -11,9 +11,9 @@ async function callApi(endpoint, options = {}) {
   // await simulateNetworkLatency();
 
   options.headers = {
-     "Content-Type": "application/json",
-     Accept: "application/json"
-   };
+    "Content-Type": "application/json",
+    Accept: "application/json"
+  };
 
   const url = BASE_URL + endpoint;
   const response = await fetch(url, options);
@@ -35,6 +35,7 @@ const api = {
   read(badgeId) {
     return callApi(`/badges/${badgeId}`);
   },
+
   update(badgeId, updates) {
     return callApi(`/badges/${badgeId}`, {
       method: "PUT",
@@ -44,7 +45,8 @@ const api = {
   // Lo hubiera llamado `delete`, pero `delete` es un keyword en JavaScript asi que no es buena idea :P
   remove(badgeId) {
     return callApi(`/badges/${badgeId}`, {
-      method: "DELETE"
+      method: "DELETE",
+      body: JSON.stringify(badgeId)
     });
   }
 };

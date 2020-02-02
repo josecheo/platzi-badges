@@ -29,7 +29,7 @@ class BadgeEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      const data = await api.badges.read(this.props.match.params.badgeId);
+      const data = await api.read(this.props.match.params.badgeId);
       this.setState({ loading: false, form: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -50,7 +50,7 @@ class BadgeEdit extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.update(this.props.match.params.badgeId, this.state.form);
+      await api.update(this.props.match.params.badgeId, this.state.form);
       this.setState({ loading: false });
       Swal.fire("Good job!", "Edit is successful", "success");
       this.props.history.push("/badges");

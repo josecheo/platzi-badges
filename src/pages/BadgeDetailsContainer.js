@@ -20,7 +20,7 @@ class BadgeDetailsContainer extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      const data = await api.badges.read(this.props.match.params.badgeId);
+      const data = await api.read(this.props.match.params.badgeId);
       this.setState({ loading: false, data: data });
     } catch (error) {
       this.setState({ loading: false, error: error });
@@ -39,12 +39,13 @@ class BadgeDetailsContainer extends React.Component {
     this.setState({ loading: true, error: null });
 
     try {
-      await api.badges.remove(this.props.match.params.badgeId);
+      await api.remove(this.props.match.params.badgeId);
       this.setState({ loading: false });
       Swal.fire("Good job!", "Delete is successful", "success");
       this.props.history.push("/badges");
     } catch (error) {
-      this.setState({ loading: false, error: error });
+        this.setState({ loading: false, error: null });
+      this.props.history.push("/badges");
     }
   };
 
@@ -53,9 +54,9 @@ class BadgeDetailsContainer extends React.Component {
       return <Loading />;
     }
 
-    if (this.state.error) {
-      return <h3>error:{this.state.error}</h3>;
-    }
+    // if (this.state.error) {
+    //   return <h3> error: {this.state.error}</h3>;
+    // }
 
     return (
       <BadgeDetails
